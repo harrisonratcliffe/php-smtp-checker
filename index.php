@@ -3,8 +3,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-//$message = '';
-
 if (isset($_POST['smtp'])) {
     $smtp_server = htmlspecialchars($_POST['smtp_server']);
     $smtp_port = htmlspecialchars($_POST['smtp_port']);
