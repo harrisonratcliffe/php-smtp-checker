@@ -4,13 +4,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 if (isset($_POST['smtp'])) {
-    $smtp_server = htmlspecialchars($_POST['smtp_server']);
-    $smtp_port = htmlspecialchars($_POST['smtp_port']);
-    $smtp_encryption = htmlspecialchars($_POST['smtp_encryption']);
-    $smtp_username = htmlspecialchars($_POST['smtp_username']);
-    $smtp_password = htmlspecialchars($_POST['smtp_password']);
-    $email_from = htmlspecialchars($_POST['email_from']);
-    $email_to = htmlspecialchars($_POST['email_to']);
+    $smtp_server = ($_POST['smtp_server']);
+    $smtp_port = ($_POST['smtp_port']);
+    $smtp_encryption = ($_POST['smtp_encryption']);
+    $smtp_username = ($_POST['smtp_username']);
+    $smtp_password = ($_POST['smtp_password']);
+    $email_from = ($_POST['email_from']);
+    $email_to = ($_POST['email_to']);
 
     require 'lib/phpmailer/src/Exception.php';
     require 'lib/phpmailer/src/PHPMailer.php';
