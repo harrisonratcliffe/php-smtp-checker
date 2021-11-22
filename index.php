@@ -7,6 +7,7 @@ if (isset($_POST['smtp'])) {
     $smtp_server = ($_POST['smtp_server']);
     $smtp_port = ($_POST['smtp_port']);
     $smtp_encryption = ($_POST['smtp_encryption']);
+    $smtp_debug = ($_POST['smtp_debug']);
     $smtp_username = ($_POST['smtp_username']);
     $smtp_password = ($_POST['smtp_password']);
     $email_from = ($_POST['email_from']);
@@ -21,7 +22,7 @@ if (isset($_POST['smtp'])) {
     $email->Host = $smtp_server;
     $email->Port = $smtp_port;
     $email->SMTPAuth = true;
-    $email->SMTPDebug = 4;
+    $email->SMTPDebug = $smtp_debug;
     $email->SMTPSecure = $smtp_encryption;
     $email->Username = $smtp_username;
     $email->Password = $smtp_password;
@@ -73,6 +74,16 @@ if (isset($_POST['smtp'])) {
                         <option value="none">None</option>
                         <option value="ssl">SSL</option>
                         <option value="tls">TLS</option>
+                    </select>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label for="multi-state">Debug mode</label>
+                    <select name="smtp_debug" require class="pure-input-1-2">
+                        <option selected value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        option value="3">4</option>
                     </select>
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
