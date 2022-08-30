@@ -5,7 +5,7 @@
     A simple tool to check your SMTP is working, built in PHP.
     <br />
     <br />
-    <a href="https://harrisonr.uk/projects/php-smtp-checker">View Demo</a>
+    <a href="https://demo.harrisonr.uk/php-smtp-checker">View Demo</a>
     ·
     <a href="https://github.com/harrisonratcliffe/php-smtp-checker/issues">Report Bug</a>
     ·
