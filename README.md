@@ -53,4 +53,4 @@ Harrison Ratcliffe<br>
 Project Link: [https://github.com/harrisonratcliffe/php-smtp-checker](https://github.com/harrisonratcliffe/php-smtp-checker)
 
 
-[product-screenshot]: https://i.hcloud.uk/TiyAyh
+[product-screenshot]: https://raw.githubusercontent.com/harrisonratcliffe/images/main/php-smtp-checker.png
