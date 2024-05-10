@@ -39,7 +39,6 @@ if (isset($_POST['smtp'])) {
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,33 +61,33 @@ if (isset($_POST['smtp'])) {
             <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-first-name">SMTP Server:</label>
-                    <input type="text" name="smtp_server" required placeholder="smtp.server.com" class="pure-u-23-24" />
+                    <input type="text" name="smtp_server" required placeholder="smtp.server.com" class="pure-u-23-24" value="<?php echo isset($_POST['smtp_server']) ? $_POST['smtp_server'] : ''; ?>" />
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-last-name">SMTP Port:</label>
-                    <input type="number" name="smtp_port" required placeholder="465" class="pure-u-23-24" />
+                    <input type="number" name="smtp_port" required placeholder="465" class="pure-u-23-24" value="<?php echo isset($_POST['smtp_port']) ? $_POST['smtp_port'] : ''; ?>" />
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-state">Encryption</label>
                     <select name="smtp_encryption" require class="pure-input-1-2">
-                        <option value="none">None</option>
-                        <option value="ssl">SSL</option>
-                        <option value="tls">TLS</option>
+                        <option value="none" <?php echo (isset($_POST['smtp_encryption']) && $_POST['smtp_encryption'] == 'none') ? 'selected' : ''; ?>>None</option>
+                        <option value="ssl" <?php echo (isset($_POST['smtp_encryption']) && $_POST['smtp_encryption'] == 'ssl') ? 'selected' : ''; ?>>SSL</option>
+                        <option value="tls" <?php echo (isset($_POST['smtp_encryption']) && $_POST['smtp_encryption'] == 'tls') ? 'selected' : ''; ?>>TLS</option>
                     </select>
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-state">Debug mode</label>
                     <select name="smtp_debug" require class="pure-input-1-2">
-                        <option selected value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="3">4</option>
+                        <option value="0" <?php echo (isset($_POST['smtp_debug']) && $_POST['smtp_debug'] == '0') ? 'selected' : ''; ?>>0</option>
+                        <option value="1" <?php echo (isset($_POST['smtp_debug']) && $_POST['smtp_debug'] == '1') ? 'selected' : ''; ?>>1</option>
+                        <option value="2" <?php echo (isset($_POST['smtp_debug']) && $_POST['smtp_debug'] == '2') ? 'selected' : ''; ?>>2</option>
+                        <option value="3" <?php echo (isset($_POST['smtp_debug']) && $_POST['smtp_debug'] == '3') ? 'selected' : ''; ?>>3</option>
+                        <option value="4" <?php echo (isset($_POST['smtp_debug']) && $_POST['smtp_debug'] == '4') ? 'selected' : ''; ?>>4</option>
                     </select>
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-email">SMTP Username:</label>
-                    <input type="text" name="smtp_username" required class="pure-u-23-24" required="" />
+                    <input type="text" name="smtp_username" required class="pure-u-23-24" value="<?php echo isset($_POST['smtp_username']) ? $_POST['smtp_username'] : ''; ?>" />
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-city">SMTP Password:</label>
@@ -96,11 +95,11 @@ if (isset($_POST['smtp'])) {
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-city">Email from:</label>
-                    <input type="email" name="email_from" required class="pure-u-23-24" />
+                    <input type="email" name="email_from" required class="pure-u-23-24" value="<?php echo isset($_POST['email_from']) ? $_POST['email_from'] : ''; ?>" />
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <label for="multi-city">Email to:</label>
-                    <input type="email" name="email_to" required class="pure-u-23-24" />
+                    <input type="email" name="email_to" required class="pure-u-23-24" value="<?php echo isset($_POST['email_to']) ? $_POST['email_to'] : ''; ?>" />
                 </div>
             </div>
             <button type="submit" name="smtp" class="pure-button pure-button-primary">Submit</button>
